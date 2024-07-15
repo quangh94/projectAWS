@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  DB_NAME: mydatabase
+  DB_USERNAME: myuser
+  DB_HOST: "10.100.202.202"
+  DB_PORT: "5432"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: env-secret-pw
+type: Opaque
+data:
+  DB_PASSWORD: bXlwYXNzd29yZA==
